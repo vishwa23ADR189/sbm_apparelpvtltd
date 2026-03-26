@@ -1,0 +1,16 @@
+{
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@mediapipe/face_mesh": "^0.4.1633559619",
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.0.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.16.1",
+    "multer": "^2.0.2",
+    "twilio": "^5.7.1"
+  }
+}

@@ -1,0 +1,251 @@
+/* Root Variables - Clean & Minimal Theme */
+:root {
+  --primary-color: #2e3a59;         /* Deep Slate Blue */
+  --secondary-color: #6d6d6d;       /* Neutral Gray */
+  --danger-color: #d14b4b;          /* Muted Red */
+  --success-color: #3a8451;         /* Forest Green */
+  --light-color: #78a8d8;           /* Soft Light */
+  --dark-color: #1f1f1f;            /* Almost Black */
+  --accent-color: #b0b8c1;          /* Muted Steel */
+  --font-main: 'Inter', sans-serif;
+  --font-heading: 'Inter', sans-serif;
+  --transition-speed: 0.3s;
+  --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --radius: 8px;
+}
+
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* Base Styles */
+body {
+  font-family: var(--font-main);
+  background: var(--light-color);
+  color: var(--dark-color);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--primary-color);
+  font-weight: 700;
+  text-shadow: none;
+  margin-top: 0;
+}
+
+h1 { font-size: 2.4rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.3rem; }
+h5 { font-size: 1.1rem; }
+h6 { font-size: 1rem; }
+
+p {
+  margin-bottom: 1rem;
+  color: #3c3c3c;
+}
+
+/* App Layout */
+.app {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+}
+
+/* Card Styles */
+.shadow, .shadow-sm, .shadow-lg {
+  box-shadow: var(--box-shadow);
+  background-color: white;
+  border: 1px solid #e3e6ea;
+  border-radius: var(--radius);
+  padding: 1rem;
+}
+
+.rounded, .rounded-lg {
+  border-radius: var(--radius);
+}
+
+/* Header */
+.app-header {
+  background: var(--primary-color);
+  color: white;
+  padding: 2rem;
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+/* Table Styles */
+.product-list {
+  background: white;
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  overflow-x: auto;
+  box-shadow: var(--box-shadow);
+  border: 1px solid #e1e5e8;
+}
+
+.product-list table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--dark-color);
+}
+
+.product-list th,
+.product-list td {
+  padding: 1rem;
+  border: 1px solid #e1e5e8;
+  text-align: left;
+}
+
+.product-list th {
+  background: var(--secondary-color);
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+.product-list tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.product-list tr:hover {
+  background-color: #e9ecef;
+  cursor: pointer;
+}
+
+/* Buttons */
+.btn {
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: var(--radius);
+  transition: background var(--transition-speed), box-shadow var(--transition-speed);
+  border: none;
+  cursor: pointer;
+  color: white;
+  text-transform: uppercase;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+}
+.btn-primary:hover {
+  background-color: #25304a;
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+}
+.btn-secondary:hover {
+  background-color: #5c5c5c;
+}
+
+.btn-danger {
+  background-color: var(--danger-color);
+}
+.btn-danger:hover {
+  background-color: #a93333;
+}
+
+.btn-success {
+  background-color: var(--success-color);
+}
+.btn-success:hover {
+  background-color: #2e6e42;
+}
+
+/* Input Fields */
+.input-field {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #ced4da;
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  background-color: white;
+  color: var(--dark-color);
+  transition: border 0.2s ease-in-out;
+}
+.input-field:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+/* Utility Margins and Paddings */
+.mb-1 { margin-bottom: 1rem; }
+.mb-2 { margin-bottom: 2rem; }
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }
+.p-1 { padding: 1rem; }
+.p-2 { padding: 2rem; }
+
+/* Card Hover */
+.card-hover {
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+  border-radius: var(--radius);
+  background: white;
+  border: 1px solid #dee2e6;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+/* Links */
+.link-hover {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.2s ease-in-out;
+}
+.link-hover:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+/* Spinner */
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 6px solid #dee2e6;
+  border-top: 6px solid var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 2rem auto;
+
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Admin Buttons */
+.edit-btn,
+.delete-btn {
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+  color: #fff;
+}
+
+.edit-btn {
+  background-color: #457eff;
+}
+.edit-btn:hover {
+  background-color: #2f6bf3;
+}
+
+.delete-btn {
+  background-color: var(--danger-color);
+}
+.delete-btn:hover {
+  background-color: #b92a2a;
+}
