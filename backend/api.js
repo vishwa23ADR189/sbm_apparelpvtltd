@@ -1,16 +1,14 @@
-const API_URL = "http://localhost:5000"; // or use env
+const API_URL = process.env.REACT_APP_API_URL;
 
 async function addProduct(data) {
   const formData = new FormData();
-  
-  // Append text fields
+
   for (const key in data) {
     if (key !== "images") {
       formData.append(key, data[key]);
     }
   }
 
-  // Append multiple images
   if (data.images && data.images.length > 0) {
     for (let i = 0; i < data.images.length; i++) {
       formData.append("images", data.images[i]);
@@ -19,8 +17,9 @@ async function addProduct(data) {
 
   const res = await fetch(`${API_URL}/admin/products`, {
     method: "POST",
-    body: formData, // No need for headers, browser sets it automatically
+    body: formData,
   });
+
   return res.json();
 }
 
